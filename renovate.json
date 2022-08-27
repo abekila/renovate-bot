@@ -3,14 +3,17 @@
   "extends": [
     "config:base"
   ],
-"packageRules": [
+  "regexManagers": [
     {
-      "matchDatasources": ["git-tag"],
-      "matchPackageNames": ["testing-renovate-private-dependency"],
-      "versioning": "git"
+      "fileMatch": [
+        "(^|/)config.yaml$"
+      ],
+      "matchStrings": [
+        "cloud_template:[\\s\\w:\\-]+name:\\s*(?<depName>.*?)\\s*?hash:\\s*(?<currentValue>.*?)\n"
+      ],
+      "datasourceTemplate": "github-tags",
+      "versioningTemplate": "semver",
+      "packageNameTempalte": "abekila{{{depName}}}"
+      "registryUrlTemplate": "https://github.com/abekila/"
     }
-  ],
-"dependencies": {
-    "testing-renovate-private-dependency": "github:abekila/terraform-gcp-vault-consul"
-  }
 }
