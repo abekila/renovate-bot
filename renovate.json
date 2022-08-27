@@ -3,4 +3,16 @@
   "extends": [
     "config:base"
   ]
+"dependencies": {
+    "@simon-hl/testing-renovate-private-dependency-npm": "1.1.0",
+    "dayjs": "1.10.7",
+    "testing-renovate-private-dependency": "github:abekila/terraform-gcp-vault-consul"   <----- my github repo
+  }
+"packageRules": [
+    {
+      "matchDatasources": ["git-tag"],
+      "matchPackageNames": ["testing-renovate-private-dependency"],
+      "versioning": "git"
+    }
+  ]
 }
