@@ -1,0 +1,14 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "regexManagers": [
+    {
+      "fileMatch": ["(^|/)config.yaml$"],
+      "matchStrings": [
+       "template:[\\s\\w:\\-]+name:\\s*(?<depName>.*?)\\s*?version:\\s*(?<currentValue>.*?)\n"
+      ],
+      "depNameTemplate": "abekila/{{{depName}}}",
+      "versioningTemplate": "semver",
+      "datasourceTemplate": "github-tags"
+    }
+  ]
+}
