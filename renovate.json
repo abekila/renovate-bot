@@ -4,7 +4,7 @@
     {
       "fileMatch": ["(^|/)config.yaml$"],
       "matchStrings": [
-       "cloud_template:[\\s\\w:\\-]+name:\\s*(?<depName>.*?)\\s*?hash:\\s*(?<currentValue>.*?)\n"
+       "template:[\\s\\w:\\-]+name:\\s*(?<depName>.*?)\\s*?version:\\s*(?<currentValue>.*?)\n"
       ],
       "depNameTemplate": "abekila/{{{depName}}}",
       "versioningTemplate": "semver",
