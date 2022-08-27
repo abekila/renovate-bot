@@ -16,4 +16,11 @@
       "packageNameTempalte": "abekila{{{depName}}}"
       "registryUrlTemplate": "https://github.com/abekila/"
     }
+    ],
+"hostRules": [
+ {
+  "hostType": "github",
+  "matchHost": "https://github.com/abekila/"
+ }
+]
 }
